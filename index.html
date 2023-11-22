@@ -85,12 +85,20 @@
                 <h1>Write Ups</h1>
     
                 <div class="card">
-                    <div class="card-header">Discussion 1</div>
+                    <div class="card-header">Discussion 1 - AI in today's context</div>
                     <div class="card-content">
-                        <h1>Discussion:</h1>
-                        <p>...</p>
-                        <h1>Response:</h1>
-                        <p>...</p>
+                        <p>
+                            <h1>Discussion:</h1>
+                            Give a real-world use case of AI in today's context.
+                            <h1>Response:</h1>
+
+                            Current use of AI<br/><br/>
+                            AI powered assistance. AI powered assistive technology is used for many kind of services which include AI chatbots for customer service, general purpose like chatGPT and virtual shopping assistance. The AI is used to replace customer services. For example, Amazon customer service will be soon handled by chatbots to speed and help out with the process. This helps to reduce work load and speed up the time needed for consumers to receive help. Another of such use at home as a smart assistant it will help you answer questions that u ask to it some examples of it is Siri and Alexa.<br/><br/>
+                            
+                            These chatbots use natural language processing (NLP) and machine learning algorithms (ML). Natural language processing breaks down human speech into bits to understand what it is given by using processing techniques like Bag-of-words and tokenizations. Then machine learning algorithms then take the information and give the results the person desires. <br/><br/>
+                        
+                            The limitations of such algorithms are inaccurate results. Inaccurate results can include incorrect and biased results, lack of emotions and limited creativity. Due to the AI using machine learning to process a large amount of data from the internet, some results might be outdated, irrelevant or wrong. The AI chatbot can also give results which might be disturbing or insensitive to the user’s feelings and have limited creativity.
+                        </p>
                     </div>
                 </div>
                 <br/>
@@ -139,13 +147,14 @@
                     Project 4 - "Team Performance Analysis Dashboard"
                 </div>
                 <div class="card-content">
-                    <h1>Commentary / Analysis:</h1>
-                    <p>Code uses Matplotlib to create a bar plot comparing the hours played by players in two different teams (A and B). The x-axis represents the players, the y-axis represents the hours played, and there are two sets of bars for each player, one for each team. The legend distinguishes between the two teams.</p>
+                    <h1>Description:</h1>
+                    <p>Mock Practice to show to visualise hours played between players in different teams</p>
                     <div class="center-wrapper"><img src="https://github.com/tlcDataScience/tlcDataScience.github.io/blob/main/dataset/Team-Performance-Analysis-Dashboard/Team%20Performance%20Analysis%20Dashboard.png?raw=true"></div>
                     <h1>Code:</h1>
             
                     <pre>
-<code># Importing necessary libraries
+<code>
+# Importing necessary libraries
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -198,20 +207,84 @@ plt.legend()
 # Displaying the plot
 plt.show()</code>
                     </pre>
+                    <h1>Commentary / Analysis:</h1>
+                    <p>Code uses Matplotlib to create a bar plot comparing the hours played by players in two different teams (A and B). The x-axis represents the players, the y-axis represents the hours played, and there are two sets of bars for each player, one for each team. The legend distinguishes between the two teams.</p>
             </div>
         </div>
 
             <br/>
             <div class="card">
                 <div class="card-header">
-                    Project {} - {Lesson}
+                    Project 5 - Understanding effects of Covid on Retrechments
                 </div>
                 <div class="card-content">
-                    <h1>Commentary / Analysis:</h1>
-                    <p>{Description}</p>
-                    <div class="center-wrapper"><img src="" alt="Description of the image"></div>
+                    <h1>Description:</h1>
+                    <p>The objective of the code is to visually compare the retrenchment numbers in the 'services' industry between the years 2019 (pre-COVID) and 2020 (during COVID). This is done by creating a bar plot that displays retrenchment data for both years side by side.</p>
+                    <p>
+                        The visual comparison of the bar plot allows for a quick assessment of retrenchment numbers in the 'services' industry between the years 2019 and 2020.<br/>
+                        Differences in bar heights provide insights into the impact of the COVID-19 pandemic on retrenchment in this specific industry.
+                    </p>
+                    <div class="center-wrapper"><img src="https://github.com/His921/His921.github.io/blob/main/Retrenchment%20By%20Broad%20Occupational/Project-1-DS.png?raw=true" alt="Description of the image"></div>
                     <h1>Code:</h1>
-                    <pre><code>Write Code Here</code></pre>
+                    <pre>
+<code>
+# Import necessary libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load your dataframe (assuming df is already defined)
+
+# Filter data for the year 2019 and industry 'services'
+df_2019 = df[(df['year'] == 2019)]
+df_2019_s = df_2019[(df_2019['industry1'] == 'services')]
+
+# Filter data for the year 2020 and industry 'services'
+df_2020 = df[(df['year'] == 2020)]
+df_2020_s = df_2020[(df_2020['industry1'] == 'services')]
+
+# Remove duplicate rows for the year 2019
+df_2019 = df_2019.drop_duplicates()
+
+# Create a bar plot for retrenchment comparison between 2019 and 2020 for the 'services' industry
+fig1, ax1 = plt.subplots(1, 1, figsize=(15, 5))
+ax1.bar(df_2019_s['industry2'], df_2019_s['retrench'], align='edge', width=-0.2, label='2019')
+ax1.bar(df_2020_s['industry2'], df_2020_s['retrench'], align='edge', width=0.2, label='2020')
+
+# Labeling the plot
+ax1.set_xlabel('Industry')
+ax1.set_ylabel('Retrenchment')
+
+# Rotate x-axis labels to prevent overlap
+plt.setp(ax1.get_xticklabels(), rotation=30)
+
+# Set additional labels and title
+ax1.set_xlabel('Industry')
+ax1.set_ylabel('Retrenchment')
+ax1.set_title('2019 VS 2020')
+
+# Display legend to differentiate between 2019 and 2020 bars
+ax1.legend()
+
+# Show the plot
+plt.show()</code>
+                    </pre>
+                <a href="https://raw.githubusercontent.com/His921/His921.github.io/main/Retrenchment%20By%20Broad%20Occupational/RetrenchmentByIndustrylevel2.csv">Retrenchment By Broad Occupational Dataset</a>
+                <h1>Analysis:</h1>
+
+                    <ol>
+                        <li><strong>Data Loading and Filtering:</strong> The code begins by importing necessary libraries and assumes that a dataframe `df` is already defined. It filters the data for the years 2019 and 2020 and specifically for the 'services' industry.</li><br/>
+                
+                        <li><strong>Duplicate Removal:</strong> Duplicate rows for the year 2019 are removed. This ensures that each data point is unique and contributes to a fair comparison.</li><br/>
+                
+                        <li><strong>Plotting:</strong> The code creates a bar plot using Matplotlib with two sets of bars, one for 2019 and another for 2020, representing retrenchment numbers in the 'services' industry. The bars are aligned at the edge of the x-axis ticks, and different widths are used to separate them visually.</li><br/>
+                
+                        <li><strong>Labeling and Formatting:</strong> x-axis labels are rotated by 30 degrees to prevent overlap and improve readability. Axes labels are set for both x and y axes, providing context to the reader. The plot is given a title, '2019 VS 2020', to clearly convey the purpose of the visualization.</li><br/>
+                
+                        <li><strong>Legend:</strong> A legend is added to the plot to distinguish between the bars representing 2019 and 2020.</li><br/>
+                
+                        <li><strong>Visualization:</strong> Finally, the plot is displayed using `plt.show()`.</li>
+                    </ol>
                 </div>
             </div>
 
@@ -262,11 +335,14 @@ plt.show()</code>
                 <div class="card-header">Project {} - Pygame</div>
                 <div class="card-content">
                     <h1>Description:</h1>
-                    <p>Body</p>
-                </div>
-                <div class="card-content">
+                    <p>It changes color according to the key pressed <br/>
+                        R : increase red value <br/>
+                        G : increase green value <br/>
+                        B : increase blue value <br/>
+                        O : restart the color <br/>
+                        S : save</p>
                     <h1>Code:</h1>
-                    <iframe src="https://replit.com/@his91/Pygame?embed=true" width="100%" height="500"></iframe>
+                    <iframe src="https://replit.com/@his91/Colour-picker?embed=true" width="100%" height="500"></iframe>
                 </div>
             </div>
             <br/>

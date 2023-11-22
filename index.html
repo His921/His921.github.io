@@ -291,18 +291,94 @@ plt.show()</code>
             <br/>
             <div class="card">
                 <div class="card-header">
-                    Project {} - {Lesson}
+                    Project 6 - Understanding from graduate employment
                 </div>
                 <div class="card-content">
-                    <h1>Commentary / Analysis:</h1>
-                    <p>{Description}</p>
-                    <div class="center-wrapper"><img src="" alt="Description of the image"></div>
+                    <h1>Description:</h1>
+                    <p>The code reads a CSV file containing graduate employment survey data from various universities, filters the data for NUS in the specified years, handles missing values, and calculates the mean basic monthly earnings for each school. It then plots a bar chart comparing the average earnings in 2013 and 2019 for the common schools, providing a visual representation of the changes over the specified period. The x-axis represents different schools, the y-axis represents the average basic monthly earnings, and different colors distinguish the years 2013 and 2019 in the bar chart.</p>
+                    <div class="center-wrapper"><img src="https://github.com/His921/His921.github.io/blob/main/Graduate%20Employment%20Survey%20-%20NTU,%20NUS,%20SIT,%20SMU,%20SUSS%20&%20SUTD/Education.png?raw=true" alt="Description of the image"></div>
                     <h1>Code:</h1>
-                    <pre><code>Write Code Here</code></pre>
+                    <pre>
+<code># Import necessary libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the CSV file from the provided URL into a DataFrame
+
+# Filter data for the year 2013, National University of Singapore (NUS), and handle missing values
+df_2013_ntu = df[(df['year'] == 2013)]
+df_2013_ntu = df_2013_ntu[(df_2013_ntu['university'] == 'National University of Singapore')]
+df_2013_ntu = df_2013_ntu[df_2013_ntu['basic_monthly_mean'] != '-']
+df_2013_ntu = df_2013_ntu[df_2013_ntu['basic_monthly_mean'] != 'na']
+df_2013_ntu['basic_monthly_mean'] = pd.to_numeric(df_2013_ntu['basic_monthly_mean'])
+df_2013_ntu = df_2013_ntu.drop_duplicates()
+
+# Filter data for the year 2019, NUS, and handle missing values
+df_2019_ntu = df[(df['year'] == 2019)]
+df_2019_ntu = df_2019_ntu[(df_2019_ntu['university'] == 'National University of Singapore')]
+df_2019_ntu = df_2019_ntu[df_2019_ntu['basic_monthly_mean'] != '-']
+df_2019_ntu = df_2019_ntu[df_2019_ntu['basic_monthly_mean'] != 'na']
+df_2019_ntu['basic_monthly_mean'] = pd.to_numeric(df_2019_ntu['basic_monthly_mean'])
+df_2019_ntu = df_2019_ntu.drop_duplicates()
+
+# Find common schools between 2013 and 2019
+l1 = df_2013_ntu['school'].unique()
+l2 = df_2019_ntu['school'].unique()
+common_schools = list(set(l1).intersection(l2))
+
+# Filter data for common schools and calculate the mean for both 2013 and 2019
+df_2013_ntu = df_2013_ntu[df_2013_ntu['school'].isin(common_schools)]
+df_2013_ntu = round(df_2013_ntu.groupby(['school']).mean(), 0)
+
+df_2019_ntu = df_2019_ntu[df_2019_ntu['school'].isin(common_schools)]
+df_2019_ntu = round(df_2019_ntu.groupby(['school']).mean(), 0)
+
+# Plotting the graph
+fig1, ax1 = plt.subplots(1, 1, figsize=(15, 5))
+ax1.bar(df_2019_ntu.index, df_2019_ntu['basic_monthly_mean'], align='edge', width=-0.2, label='2019', color='orange')
+ax1.bar(df_2013_ntu.index, df_2013_ntu['basic_monthly_mean'], align='edge', width=0.2, label='2013', color='g')
+
+# Set axis labels and title
+ax1.set_xlabel('school')
+ax1.set_ylabel('basic_monthly_mean')
+plt.setp(ax1.get_xticklabels(), rotation=30)  # Rotate x-axis labels to prevent overlap
+ax1.set_title('2013 VS 2019')
+
+# Show legend and display the plot
+ax1.legend()
+plt.show()</code>
+                    </pre>
+                    <a href="https://raw.githubusercontent.com/His921/His921.github.io/main/Graduate%20Employment%20Survey%20-%20NTU%2C%20NUS%2C%20SIT%2C%20SMU%2C%20SUSS%20%26%20SUTD/GraduateEmploymentSurveyNTUNUSSITSMUSUSSSUTD.csv">Retrenchment By Broad Occupational Dataset</a>
+                    <h1>Analysis</h1>
+                    <ol>
+                        <p>
+                            <li><strong>Data Loading and Filtering:</strong> The provided Python code begins by importing the pandas and matplotlib libraries. It loads data from a CSV file hosted on GitHub using the <code>pd.read_csv</code> function, creating a DataFrame named <code>df</code>. The data is related to graduate employment surveys from various universities. The code then filters the DataFrame to extract information specifically for the year 2013 and 2019, focusing on the National University of Singapore (NUS).</li><br/>
+                        </p>
+                    
+                        <p>
+                            <li><strong>Duplicate Removal:</strong> Duplicate rows are removed from the extracted data to ensure that each entry is unique and contributes to an accurate comparison. The duplicates are removed using the <code>drop_duplicates()</code> method, ensuring the integrity of the dataset.</li><br/>
+                        </p>
+                    
+                        <p>
+                            <li><strong>Plotting:</strong> The script proceeds to create a bar plot using Matplotlib, visualizing the average basic monthly earnings for common schools of NUS in 2013 and 2019. The bars are aligned at the edge of the x-axis ticks, and different widths are employed to separate bars for the two respective years. Orange bars represent the data for 2019, while green bars represent the data for 2013.</li><br/>
+                        </p>
+                    
+                        <p>
+                            <li><strong>Labeling and Formatting:</strong> The x-axis labels, representing different schools, are rotated by 30 degrees to prevent overlap and enhance readability. Axes labels are set for both the x and y axes, providing context to the reader. However, there is a small inconsistency in labeling where the x-axis label is set to '2013' instead of the appropriate school names.</li><br/>
+                        </p>
+                    
+                        <p>
+                            <li><strong>Legend:</strong> A legend is added to the plot, differentiating between the bars corresponding to 2013 and 2019. This aids in interpreting the visualization and understanding the color-coding used in the graph.</li><br/>
+                        </p>
+                    
+                        <p>
+                            <li><strong>Visualization:</strong> The plot is displayed using <code>plt.show()</code>, allowing for a visual comparison of the average basic monthly earnings across common schools of NUS between the years 2013 and 2019.</li><br/>
+                        </p>
+                    </ol> 
                 </div>
             </div>
 
-            <br/>
+            <!-- <br/>
             <div class="card">
                 <div class="card-header">
                     Project {} - {Lesson}
@@ -328,11 +404,11 @@ plt.show()</code>
                     <h1>Code:</h1>
                     <pre><code>Write Code Here</code></pre>
                 </div>
-            </div>
+            </div> -->
 
             <br/>
             <div class="card">
-                <div class="card-header">Project {} - Pygame</div>
+                <div class="card-header">Project {} - Pygame Color Picker</div>
                 <div class="card-content">
                     <h1>Description:</h1>
                     <p>It changes color according to the key pressed <br/>

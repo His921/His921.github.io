@@ -13,6 +13,7 @@
                 overflow: hidden;
                 margin: auto;
                 box-shadow:10px 10px 30px -20px;
+                /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
                 
             }
 
@@ -58,6 +59,28 @@
                 display: block;
                 margin: auto;
             }
+
+            /* Table Format */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            th, td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+            /* Paragraph */
+            p {
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
             
         </style>
     </head>
@@ -91,15 +114,15 @@
                             <div class="center-wrapper"><img src="https://github.com/His921/His921.github.io/blob/main/Assets/AI.jpeg?raw=true" alt="Description of the image"></div>
 
                             <h1>Discussion:</h1>
-                            Explore how artificial intelligence is shaping our world today. What are the ways in which AI is influencing our daily lives, from the technology we use to the jobs we do? Consider both the positive aspects, such as innovative applications and convenience, as well as potential challenges and ethical concerns. How do you see AI continuing to evolve and impact society in the future?
+                            <p> Explore how artificial intelligence is shaping our world today. What are the ways in which AI is influencing our daily lives, from the technology we use to the jobs we do? Consider both the positive aspects, such as innovative applications and convenience, as well as potential challenges and ethical concerns. How do you see AI continuing to evolve and impact society in the future? </p>
                             <h1>Response:</h1>
 
-                            Current use of AI<br/><br/>
+                            <p>
                             AI powered assistance. AI powered assistive technology is used for many kind of services which include AI chatbots for customer service, general purpose like chatGPT and virtual shopping assistance. The AI is used to replace customer services. For example, Amazon customer service will be soon handled by chatbots to speed and help out with the process. This helps to reduce work load and speed up the time needed for consumers to receive help. Another of such use at home as a smart assistant it will help you answer questions that u ask to it some examples of it is Siri and Alexa.<br/><br/>
                             
                             These chatbots use natural language processing (NLP) and machine learning algorithms (ML). Natural language processing breaks down human speech into bits to understand what it is given by using processing techniques like Bag-of-words and tokenizations. Then machine learning algorithms then take the information and give the results the person desires. <br/><br/>
                         
-                            The limitations of such algorithms are inaccurate results. Inaccurate results can include incorrect and biased results, lack of emotions and limited creativity. Due to the AI using machine learning to process a large amount of data from the internet, some results might be outdated, irrelevant or wrong. The AI chatbot can also give results which might be disturbing or insensitive to the user’s feelings and have limited creativity.
+                            The limitations of such algorithms are inaccurate results. Inaccurate results can include incorrect and biased results, lack of emotions and limited creativity. Due to the AI using machine learning to process a large amount of data from the internet, some results might be outdated, irrelevant or wrong. The AI chatbot can also give results which might be disturbing or insensitive to the user’s feelings and have limited creativity.</p>
                         </p>
                     </div>
                 </div>
@@ -114,12 +137,30 @@
             <div class="card">
                 <div class="card-header">Project 1 - Miner-haven</div>
                 <div class="card-content">
+
+                    <!-- Description -->
                     <h1>Description:</h1>
-                    <p>It is a game that is made using words and symbols using python. It is about mining for items in the ground and I try to add a bit of detail by drawing with symbols and numbers. It uses the random library for the item drop rates.</p>
-                    <h1>Instruction:</h1>
-                    <p>...</p>
+                    <p>
+                        The provided Python code appears to be a text-based mining game. In the game, the player can perform various actions such as mining, selling mined items, using bombs, visiting a shop to buy items, checking inventory and balance, and quitting the game. The player starts with a basic shovel and can upgrade to better shovels using in-game currency. The goal is to accumulate wealth by mining valuable items and selling them.
+                      </p>
+
+                    <!-- Instructions -->
+                    <h1>Instructions:</h1>
+                    <ol>
+                        <li><strong>Mining (Option 1):</strong> Type 1 to mine for items. The type of item obtained is random, and each item has a specific monetary value.</li><br/>
+                        <li><strong>Selling (Option 2):</strong> Type 2 to sell the mined items. The player receives money based on the total value of the items in their inventory.</li><br/>
+                        <li><strong>Using Bombs (Option 3):</strong> Type 3 to use bombs for mining. Bombs allow the player to obtain multiple items in a single attempt. The number of items and types are random.</li><br/>
+                        <li><strong>Shop (Option 4):</strong> Type 4 to visit the shop. In the shop, the player can buy bombs and upgrade their shovel for better mining results. Each shovel has a price, and the player can choose to buy one if they have enough money.</li><br/>
+                        <li><strong>Inventory Check (Option 5):</strong> Type 5 to check the inventory and current balance. The player can see the quantity of each item they have and their remaining money.</li><br/>
+                        <li><strong>Quitting (Option 6):</strong> Type 6 to quit the game. A confirmation prompt will appear, and the player can choose to quit or continue playing.</li>
+                    </ol>
+
                     <h1>Code:</h1>
                     <iframe src="https://replit.com/@his91/Miner-haven?embed=true" width="100%" height="500"></iframe>
+
+                    <!-- Concept-->
+                    <h1>Concept:</h1>
+                    <p>The game utilizes basic concepts of Python programming, including functions, loops, conditional statements, dictionaries, and user input handling. It incorporates a simple text-based interface to engage the player. The game mechanics involve random events, such as item generation during mining and bomb usage. The player's progress is tracked through variables like money, inventory, and the type of shovel being used. The code structure is modular, with functions for different game aspects, making it easy to understand and maintain. Overall, the game provides a rudimentary simulation of a mining adventure with elements of chance and strategy.</p>
                 </div>
             </div>
             <br/>
@@ -128,11 +169,22 @@
                 <div class="card-header">Project 2 - Dice Stats</div>
                 <div class="card-content">
                     <h1>Description:</h1>
-                    <p>This is written using the random library, this code allows you to either roll 1 or 2 dice a hundred times and take the give the results it also shows the number which is rolled the most, the min number, the mean and the median.</p>
+                    <p>The provided Python code is a dice rolling simulator that allows users to choose between rolling a single six-sided die or two six-sided dice. The program generates random dice rolls based on the user's choice and records the frequency of each possible outcome in a dictionary. After simulating 100 dice rolls, the code calculates and displays statistics such as the maximum and minimum occurrences, mean, and median of the dice rolls.</p>
                     <h1>Instruction:</h1>
-                    <p>...</p>
+                    <p>To use the Python code, users should run the script and input either '1' for a single six-sided die or '2' for two six-sided dice when prompted. The program then simulates 100 dice rolls based on the user's selection and provides statistics on the outcomes, including the maximum and minimum occurrences, mean, and median values.</p>
                     <h1>Code:</h1>
                     <iframe src="https://replit.com/@his91/DiceStats?embed=true" width="100%" height="500"></iframe>
+                    <h1>Concept:</h1>
+                    <p>The Python code demonstrates the use of random number generation, dictionaries, loops, conditional statements, and basic arithmetic operations. It employs a function to find the key corresponding to a given value in a dictionary, sorts the outcomes, and calculates statistical measures such as mean and median. The code showcases fundamental programming concepts and statistical analysis techniques.
+                    <ul>
+                        <li><strong>Mean:</strong> Calculated by summing up all values in the dataset and dividing by the total number of values. In the code, it is computed as the total sum of dice roll outcomes divided by the number of rolls (100).</li><br/>
+                      
+                        <li><strong>Median:</strong> The middle value of a sorted dataset. In the code, the list of dice roll outcomes is sorted, and the median is the sum of the 51st and 52nd values in the sorted list for a total of 100 rolls.</li><br/>
+                      
+                        <li><strong>Maximum and Minimum:</strong> Found using the <code>max()</code> and <code>min()</code> functions, respectively. The code employs a custom function, <code>get_key_by_value</code>, to retrieve the corresponding dice face (key) for the maximum and minimum occurrences in the dictionary tracking the frequency of each outcome.</li>
+                      </ul>
+                      
+                    </p>
                 </div>
             </div>
             <br/>
@@ -141,11 +193,141 @@
                 <div class="card-header">Project 3 - TicTacToe</div>
                 <div class="card-content">
                     <h1>Description:</h1>
-                    <p>This game has a single player and a multiplayer, for the single player the player is playing against a bot which randomly picks a space on the tic tac toe board that is not taken up. Meanwhile the multiplayer one is just a pass and play.</p>
+                    <p>The provided Python code is an implementation of a simple console-based tic-tac-toe game. 
+                        The game supports two players and a single-player mode against a computer opponent. Players take turns entering 
+                        their moves by specifying the row (a, b, or c) and column (1, 2, or 3) where they want to place their symbol ('X' 
+                        for player 1 and 'O' for player 2 or the computer). The game checks for a winner or a draw after each move and 
+                        displays the current state of the board.</p>
                     <h1>Instruction:</h1>
-                    <p>...</p>
+                    <p>To play the game, run the Python script and input the number of players (1 or 2) when prompted. 
+                        In a two-player game, each player takes turns entering their moves. In a single-player game, the player competes 
+                        against a computer opponent that makes random moves. The game ends when one player wins, it's a draw, or all 
+                        available moves are exhausted. The board is displayed after each move, and the winner or draw is announced at 
+                        the end.</p>
                     <h1>Code:</h1>
-                    <iframe src="https://replit.com/@his91/tic-tac-toe?embed=true" width="100%" height="500"></iframe>
+                        <iframe src="https://replit.com/@his91/tic-tac-toe?embed=true" width="100%" height="500"></iframe>
+                    <h1>Concept:</h1>
+                    <p>The code implements a classic tic-tac-toe game using Python. It utilizes a 3x3 grid represented by 
+                        variables for each cell. The check function is responsible for verifying if a player has won by checking all 
+                        possible winning combinations. The game loop continues until there is a winner or a draw, and the display function 
+                        is used to print the current state of the board. In single-player mode, the computer opponent makes random moves 
+                        by selecting available positions from a list. The game employs basic input/output interactions and conditional 
+                        statements to control the flow of the game.</p> 
+                        
+                        <table>
+                            <tr>
+                              <th>Concept</th>
+                              <th>Details</th>
+                            </tr>
+                            <!-- Grid Representation -->
+                            <tr>
+                              <td><b>Grid Representation</b></td>
+                              <td>
+                                <ul>
+                                  <li>The game board is represented as a 3x3 grid using variables for each cell.</li>
+                                  <li>Variables like <code>a1</code>, <code>a2</code>, <code>a3</code>, <code>b1</code>, <code>b2</code>, <code>b3</code>,
+                                    <code>c1</code>, <code>c2</code>, <code>c3</code> store the symbols ('X', 'O', or '') in each corresponding cell.
+                                  </li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Winning Combinations -->
+                            <tr>
+                              <td><b>Winning Combinations</b></td>
+                              <td>
+                                <ul>
+                                  <li>The <code>check</code> function checks for winning combinations after each move.</li>
+                                  <li>It examines rows, columns, and diagonals to see if a player has three of their symbols in a row.</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Display Function -->
+                            <tr>
+                              <td><b>Display Function</b></td>
+                              <td>
+                                <ul>
+                                  <li>The <code>display</code> function prints the current state of the tic-tac-toe board.</li>
+                                  <li>It uses a simple ASCII representation to visualize the board, showing player symbols in their respective positions.</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Player Turns -->
+                            <tr>
+                              <td><b>Player Turns</b></td>
+                              <td>
+                                <ul>
+                                  <li>The game alternates turns between two players or between a player and the computer.</li>
+                                  <li>In a two-player game, players input their moves using coordinates (e.g., 'a1', 'b2').</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Player Input Handling -->
+                            <tr>
+                              <td><b>Player Input Handling</b></td>
+                              <td>
+                                <ul>
+                                  <li>User input is processed to determine the player's desired move.</li>
+                                  <li>The input is validated, and the corresponding cell is updated with the player's symbol.</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Game Loop -->
+                            <tr>
+                              <td><b>Game Loop</b></td>
+                              <td>
+                                <ul>
+                                  <li>The game runs in a loop until there is a winner, a draw, or all available moves are exhausted (a maximum of nine moves).</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Random Move for Computer Player -->
+                            <tr>
+                              <td><b>Random Move for Computer Player</b></td>
+                              <td>
+                                <ul>
+                                  <li>In single-player mode, the computer opponent makes random moves.</li>
+                                  <li>It selects available positions from a list of remaining empty cells.</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Game Outcome Checking -->
+                            <tr>
+                              <td><b>Game Outcome Checking</b></td>
+                              <td>
+                                <ul>
+                                  <li>After each move, the game checks if a player has won or if the game is a draw.</li>
+                                  <li>If a winning condition is met, the game announces the winner.</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Draw Condition -->
+                            <tr>
+                              <td><b>Draw Condition</b></td>
+                              <td>
+                                <ul>
+                                  <li>If no player wins after all nine moves, the game declares a draw.</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Basic Input/Output Interaction -->
+                            <tr>
+                              <td><b>Basic Input/Output Interaction</b></td>
+                              <td>
+                                <ul>
+                                  <li>The game uses simple input/output statements to interact with the players.</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Conditional Statements -->
+                            <tr>
+                              <td><b>Conditional Statements</b></td>
+                              <td>
+                                <ul>
+                                  <li>Conditional statements control the flow of the game based on user input and winning conditions.</li>
+                                </ul>
+                              </td>
+                            </tr>
+                          </table>
                 </div>
             </div>
             <br/>
@@ -293,6 +475,7 @@ plt.show()</code>
                 
                         <li><strong>Visualization:</strong> Finally, the plot is displayed using `plt.show()`.</li>
                     </ol>
+                    <h1>Commentary</h1>
                 </div>
             </div>
 
@@ -361,28 +544,20 @@ plt.show()</code>
                     <ol>
                         <p>
                             <li><strong>Data Loading and Filtering:</strong> The provided Python code begins by importing the pandas and matplotlib libraries. It loads data from a CSV file hosted on GitHub using the <code>pd.read_csv</code> function, creating a DataFrame named <code>df</code>. The data is related to graduate employment surveys from various universities. The code then filters the DataFrame to extract information specifically for the year 2013 and 2019, focusing on the National University of Singapore (NUS).</li><br/>
-                        </p>
-                    
-                        <p>
+                        
                             <li><strong>Duplicate Removal:</strong> Duplicate rows are removed from the extracted data to ensure that each entry is unique and contributes to an accurate comparison. The duplicates are removed using the <code>drop_duplicates()</code> method, ensuring the integrity of the dataset.</li><br/>
-                        </p>
-                    
-                        <p>
+                        
                             <li><strong>Plotting:</strong> The script proceeds to create a bar plot using Matplotlib, visualizing the average basic monthly earnings for common schools of NUS in 2013 and 2019. The bars are aligned at the edge of the x-axis ticks, and different widths are employed to separate bars for the two respective years. Orange bars represent the data for 2019, while green bars represent the data for 2013.</li><br/>
-                        </p>
-                    
-                        <p>
+                       
                             <li><strong>Labeling and Formatting:</strong> The x-axis labels, representing different schools, are rotated by 30 degrees to prevent overlap and enhance readability. Axes labels are set for both the x and y axes, providing context to the reader. However, there is a small inconsistency in labeling where the x-axis label is set to '2013' instead of the appropriate school names.</li><br/>
-                        </p>
-                    
-                        <p>
+                        
                             <li><strong>Legend:</strong> A legend is added to the plot, differentiating between the bars corresponding to 2013 and 2019. This aids in interpreting the visualization and understanding the color-coding used in the graph.</li><br/>
-                        </p>
-                    
-                        <p>
+                        
                             <li><strong>Visualization:</strong> The plot is displayed using <code>plt.show()</code>, allowing for a visual comparison of the average basic monthly earnings across common schools of NUS between the years 2013 and 2019.</li><br/>
                         </p>
                     </ol> 
+                    <h1>Commentary</h1>
+
                 </div>
             </div>
 
@@ -418,17 +593,38 @@ plt.show()</code>
             <div class="card">
                 <div class="card-header">Project 7 - Pygame Color Picker</div>
                 <div class="card-content">
-                    <h1>Description:</h1>
-                    <p>This is a pygame color picker that allows us to show different color based on RGB values</p>
-                    <h1>Instruction:</h1>
-                    <p>It changes color according to the key pressed <br/>
-                        R : increase red value <br/>
-                        G : increase green value <br/>
-                        B : increase blue value <br/>
-                        O : restart the color <br/>
-                        S : save</p>
+                    <!-- Description -->
+                    <h1>Description</h1>
+                    <p>This Python code uses the Pygame library to create a simple interactive program that allows users to change the background color using the keys 'R', 'G', and 'B'. The program also includes a feature to save the current color values (RGB) to a CSV file for later retrieval.</p>
+
+                    <!-- Instructions -->
+                    <h1>Instructions</h1>
+                    <p>
+                    <ul>
+                        <li>Press 'R' to increase the red component of the background color.</li><br/>
+                        <li>Press 'G' to increase the green component of the background color.</li><br/>
+                        <li>Press 'B' to increase the blue component of the background color.</li><br/>
+                        <li>Press 'O' to set the background color to white (255, 255, 255).</li><br/>
+                        <li>Press 'Space' to exit the program.</li><br/>
+                        <li>Press 'S' to save the current color values to a CSV file named 'saved.csv'.</li>
+                    </ul>
+                    </p>
+
+                    <!-- Code -->
                     <h1>Code:</h1>
                     <iframe src="https://replit.com/@his91/Colour-picker?embed=true" width="100%" height="500"></iframe>
+
+                    <!-- Concepts -->
+                    <h1>Concepts</h1>
+                    <p>
+                    <ul>
+                        <li><strong>Pygame:</strong> A cross-platform set of Python modules designed for writing video games.</li><br/>
+                        <li><strong>CSV File Handling:</strong> Reading and writing data to and from CSV files using the 'csv' module.</li><br/>
+                        <li><strong>Event Handling:</strong> Detecting and responding to keyboard events to modify program behavior.</li><br/>
+                        <li><strong>Scoreboard Class:</strong> A class for displaying and updating the RGB color values on the screen.</li>
+                    </ul>
+                    </p>
+
                 </div>
             </div>
             <br/>
@@ -436,22 +632,42 @@ plt.show()</code>
             <div class="card">
                 <div class="card-header">Project 8 - Advance Color Picker</div>
                 <div class="card-content">
-                    <h1>Description:</h1>
-                    <p>This is a pygame color picker that allows us to save code</p>
-                    <h1>Instruction:</h1>
-                    <p>It changes color according to the key pressed <br/>
-                        w : move up <br/>
-                        s : move down <br/>
-                        a : move left <br/>
-                        d : move right <br/>
-                        R : increase red value <br/>
-                        G : increase green value <br/>
-                        B : increase blue value <br/>
-                        O : restart the color <br/>
-                        L : save <br/>
+                    <!-- Description -->
+                    <h1>Description</h1>
+                    <p>This Python code utilizes the Pygame library to create an interactive program that allows users to manipulate the background color and draw rectangles on the screen. The program also features the ability to save the current color values and rectangle positions to a CSV file for later retrieval.</p>
+
+                    <!-- Instructions -->
+                    <h1>Instructions</h1>
+                    <p>
+                    <ul>
+                        <li>Press 'R' to increase the red component of the background color.</li><br/>
+                        <li>Press 'G' to increase the green component of the background color.</li><br/>
+                        <li>Press 'B' to increase the blue component of the background color.</li><br/>
+                        <li>Press 'O' to set the background color to white (255, 255, 255).</li><br/>
+                        <li>Press 'D' to move the rectangle to the right.</li><br/>
+                        <li>Press 'A' to move the rectangle to the left.</li><br/>
+                        <li>Press 'W' to move the rectangle up.</li><br/>
+                        <li>Press 'S' to move the rectangle down.</li><br/>
+                        <li>Press 'P' to save the current color and rectangle position.</li><br/>
+                        <li>Press 'L' to save the current color values to a CSV file named 'saved.csv'.</li><br/>
+                        <li>Press 'Space' to exit the program.</li>
+                    </ul>
                     </p>
+
+                    <!-- Code -->
                     <h1>Code:</h1>
                     <iframe src="https://replit.com/@his91/Colour-picker-v2?embed=true" width="100%" height="500"></iframe>
+
+                    <!-- Concepts -->
+                    <h1>Concepts</h1>
+                    <p>
+                    <ul>
+                        <li><strong>Pygame:</strong> A cross-platform set of Python modules designed for writing video games.</li><br/>
+                        <li><strong>CSV File Handling:</strong> Reading and writing data to and from CSV files using the 'csv' module.</li><br/>
+                        <li><strong>Event Handling:</strong> Detecting and responding to keyboard events to modify program behavior.</li><br/>
+                        <li><strong>Rectangles:</strong> Drawing and manipulating rectangles on the screen using Pygame.</li>
+                    </ul>
+                    </p>
                 </div>
             </div>
 

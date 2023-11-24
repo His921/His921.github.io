@@ -231,120 +231,63 @@
                         by selecting available positions from a list. The game employs basic input/output interactions and conditional 
                         statements to control the flow of the game.</p> 
                         
-                    <table>
-                        <tr>
-                            <th>Concept</th>
-                            <th>Details</th>
-                        </tr>
-                        <!-- Grid Representation -->
-                        <tr>
-                            <td><b>Grid Representation</b></td>
-                            <td>
-                            <ul>
-                                <li>The game board is represented as a 3x3 grid using variables for each cell.</li>
-                                <li>Variables like <code>a1</code>, <code>a2</code>, <code>a3</code>, <code>b1</code>, <code>b2</code>, <code>b3</code>,
-                                <code>c1</code>, <code>c2</code>, <code>c3</code> store the symbols ('X', 'O', or '') in each corresponding cell.
-                                </li>
-                            </ul>
-                            </td>
-                        </tr>
-                        <!-- Winning Combinations -->
-                        <tr>
-                            <td><b>Winning Combinations</b></td>
-                            <td>
-                            <ul>
-                                <li>The <code>check</code> function checks for winning combinations after each move.</li>
-                                <li>It examines rows, columns, and diagonals to see if a player has three of their symbols in a row.</li>
-                            </ul>
-                            </td>
-                        </tr>
-                        <!-- Display Function -->
-                        <tr>
-                            <td><b>Display Function</b></td>
-                            <td>
-                            <ul>
-                                <li>The <code>display</code> function prints the current state of the tic-tac-toe board.</li>
-                                <li>It uses a simple ASCII representation to visualize the board, showing player symbols in their respective positions.</li>
-                            </ul>
-                            </td>
-                        </tr>
-                        <!-- Player Turns -->
-                        <tr>
-                            <td><b>Player Turns</b></td>
-                            <td>
-                            <ul>
-                                <li>The game alternates turns between two players or between a player and the computer.</li>
-                                <li>In a two-player game, players input their moves using coordinates (e.g., 'a1', 'b2').</li>
-                            </ul>
-                            </td>
-                        </tr>
-                        <!-- Player Input Handling -->
-                        <tr>
-                            <td><b>Player Input Handling</b></td>
-                            <td>
-                            <ul>
-                                <li>User input is processed to determine the player's desired move.</li>
-                                <li>The input is validated, and the corresponding cell is updated with the player's symbol.</li>
-                            </ul>
-                            </td>
-                        </tr>
-                        <!-- Game Loop -->
-                        <tr>
-                            <td><b>Game Loop</b></td>
-                            <td>
-                            <ul>
-                                <li>The game runs in a loop until there is a winner, a draw, or all available moves are exhausted (a maximum of nine moves).</li>
-                            </ul>
-                            </td>
-                        </tr>
-                        <!-- Random Move for Computer Player -->
-                        <tr>
-                            <td><b>Random Move for Computer Player</b></td>
-                            <td>
-                            <ul>
-                                <li>In single-player mode, the computer opponent makes random moves.</li>
-                                <li>It selects available positions from a list of remaining empty cells.</li>
-                            </ul>
-                            </td>
-                        </tr>
-                        <!-- Game Outcome Checking -->
-                        <tr>
-                            <td><b>Game Outcome Checking</b></td>
-                            <td>
-                            <ul>
-                                <li>After each move, the game checks if a player has won or if the game is a draw.</li>
-                                <li>If a winning condition is met, the game announces the winner.</li>
-                            </ul>
-                            </td>
-                        </tr>
-                        <!-- Draw Condition -->
-                        <tr>
-                            <td><b>Draw Condition</b></td>
-                            <td>
-                            <ul>
-                                <li>If no player wins after all nine moves, the game declares a draw.</li>
-                            </ul>
-                            </td>
-                        </tr>
-                        <!-- Basic Input/Output Interaction -->
-                        <tr>
-                            <td><b>Basic Input/Output Interaction</b></td>
-                            <td>
-                            <ul>
-                                <li>The game uses simple input/output statements to interact with the players.</li>
-                            </ul>
-                            </td>
-                        </tr>
-                        <!-- Conditional Statements -->
-                        <tr>
-                            <td><b>Conditional Statements</b></td>
-                            <td>
-                            <ul>
-                                <li>Conditional statements control the flow of the game based on user input and winning conditions.</li>
-                            </ul>
-                            </td>
-                        </tr>
-                        </table>
+                        <table>
+                            <tr>
+                              <th>Concept</th>
+                              <th>Details</th>
+                            </tr>
+                            <!-- Grid Representation -->
+                            <tr>
+                              <td><b>Grid Representation</b></td>
+                              <td>
+                                <ul>
+                                  <li>The game board is represented as a 3x3 grid using variables for each cell.</li>
+                                  <li>Variables like <code>a1</code>, <code>a2</code>, <code>a3</code>, <code>b1</code>, <code>b2</code>, <code>b3</code>,
+                                    <code>c1</code>, <code>c2</code>, <code>c3</code> store the symbols ('X', 'O', or '') in each corresponding cell.
+                                  </li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Player Turns -->
+                            <tr>
+                              <td><b>Player Turns</b></td>
+                              <td>
+                                <ul>
+                                  <li>The game alternates turns between two players or between a player and the computer.</li>
+                                  <li>In a two-player game, players input their moves using coordinates (e.g., 'a1', 'b2').</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Player Input Handling -->
+                            <tr>
+                              <td><b>Player Input Handling</b></td>
+                              <td>
+                                <ul>
+                                  <li>User input is processed to determine the player's desired move.</li>
+                                  <li>The input is validated, and the corresponding cell is updated with the player's symbol.</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Winning Combinations -->
+                            <tr>
+                              <td><b>Winning Combinations</b></td>
+                              <td>
+                                <ul>
+                                  <li>The <code>check</code> function checks for winning combinations after each move.</li>
+                                  <li>It examines rows, columns, and diagonals to see if a player has three of their symbols in a row.</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- Game Loop -->
+                            <tr>
+                              <td><b>Game Loop</b></td>
+                              <td>
+                                <ul>
+                                  <li>The game runs in a loop until there is a winner, a draw, or all available moves are exhausted (a maximum of nine moves).</li>
+                                </ul>
+                              </td>
+                            </tr>
+                          </table>
                 </div>
             </div>
             <br/>
@@ -585,34 +528,6 @@ plt.show()</code>
                 </div>
             </div>
 
-            <!-- <br/>
-            <div class="card">
-                <div class="card-header">
-                    Project {} - {Lesson}
-                </div>
-                <div class="card-content">
-                    <h1>Commentary / Analysis:</h1>
-                    <p>{Description}</p>
-                    <div class="center-wrapper"><img src="" alt="Description of the image"></div>
-                    <h1>Code</h1>
-                    <pre><code>Write Code Here</code></pre>
-                </div>
-            </div>
-
-            <br/>
-            <div class="card">
-                <div class="card-header">
-                    Project {} - {Lesson}
-                </div>
-                <div class="card-content">
-                    <h1>Commentary / Analysis:</h1>
-                    <p>{Description}</p>
-                    <div class="center-wrapper"><img src="" alt="Description of the image"></div>
-                    <h1>Code</h1>
-                    <pre><code>Write Code Here</code></pre>
-                </div>
-            </div> -->
-
             <br/>
             <div class="card">
                 <div class="card-header">Project 7 - Pygame Color Picker</div>
@@ -708,6 +623,7 @@ plt.show()</code>
             <div class="card">
                 <div class="card-header">Project 9 - Fishing Game</div>
                 <div class="card-content">
+                    <!-- Description -->
                     <h1>Description</h1>
                     <pre>
                         ___======____=---=)
@@ -725,10 +641,21 @@ plt.show()</code>
                                                JJ| \UUU)
                                                (UU)
                     </pre>
-                    <h1>Instruction:</h1>
+                    <h1>Instruction</h1>
                     <p>...</p>
+
+                    <!-- Code -->
                     <h1>Code</h1>
+                    <b>2020 Version</b>
                     <iframe src="https://replit.com/@his91/fishing-game?embed=true" width="100%" height="500"></iframe>
+                    <h1>Code</h1>
+                    <b>2023 Version</b>
+                    <iframe src="https://replit.com/@his91/fishing-game-test?embed=true" width="100%" height="500"></iframe>
+
+                    <!-- Concept -->
+                    <h1>
+                        
+                    </h1>
                 </div>
             </div>
             <br/>

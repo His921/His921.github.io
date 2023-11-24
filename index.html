@@ -454,6 +454,7 @@
 									</ul>
 								</td>
 							</tr>
+                            
 							<!-- Game Loop -->
 							<tr>
 								<td><b>Game Loop</b></td>
@@ -480,8 +481,20 @@
 						<!-- Description -->
 						<h1>Description</h1>
 						<p>
-							Mock Practice to show to visualise hours played between players in
-							different teams
+							The provided Python code utilizes the Matplotlib and Pandas
+							libraries to create a bar plot comparing two sets of player
+							streaming data, labeled as Team A and Team B. The streaming data,
+							represented as hours played by each player, is organized in Pandas
+							DataFrames for both teams. The code then generates a bar plot
+							using Matplotlib, with bars for Team A and Team B positioned next
+							to each other for visual comparison. The x-axis corresponds to
+							player names, while the y-axis represents the hours played. Each
+							team's bars are slightly shifted for better visualization, and the
+							plot is adorned with labels, a title, x-axis ticks displaying
+							player names, and a legend to distinguish between the two teams.
+							Overall, the code provides a clear visual representation of the
+							streaming hours for players in Teams A and B, facilitating a quick
+							and easy comparison between the two datasets.
 						</p>
 						<div class="center-wrapper">
 							<img
@@ -546,14 +559,38 @@ plt.legend()
 # Displaying the plot
 plt.show()</code>
                     </pre>
-						<h1>Commentary / Analysis:</h1>
-						<p>
-							Code uses Matplotlib to create a bar plot comparing the hours
-							played by players in two different teams (A and B). The x-axis
-							represents the players, the y-axis represents the hours played,
-							and there are two sets of bars for each player, one for each team.
-							The legend distinguishes between the two teams.
-						</p>
+						<h1>Concepts</h1>
+						<table>
+                            <tr>
+                                <td>Matplotlib</td>
+                                <td>Library for data visualization in Python</td>
+                            </tr>
+                            <tr>
+                                <td>Pandas</td>
+                                <td>Library for data manipulation and analysis in Python</td>
+                            </tr>
+                            <tr>
+                                <td>DataFrame</td>
+                                <td>Pandas data structure for organizing tabular data</td>
+                            </tr>
+                            <tr>
+                                <td>NumPy</td>
+                                <td>Library for numerical operations in Python</td>
+                            </tr>
+                            <tr>
+                                <td>subplots</td>
+                                <td>Matplotlib function for creating a single-plot figure</td>
+                            </tr>
+                            <tr>
+                                <td>bar</td>
+                                <td>Matplotlib function for creating bar plots</td>
+                            </tr>
+                            <tr>
+                                <td>Customization</td>
+                                <td>Adjusting plot attributes such as labels, titles, and legends for better interpretability</td>
+                            </tr>
+                        </table>
+                        
 					</div>
 				</div>
 
